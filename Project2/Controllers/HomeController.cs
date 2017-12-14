@@ -31,7 +31,7 @@ namespace Project2.Controllers
             return View();
         }
 
-        [Authorize]
+        //[Authorize]
         public ActionResult FrequentQuestions(string MisName)
         {
             IEnumerable<FaqPage> mission = db.Database.SqlQuery<FaqPage>("SELECT a.missionID, a.missionName, a.missionPresidentName, a. missionAddress, a.missionLanguage, a.missionClimate, a.missionDomReligion, a.missionFlagURL, c.missionQuestionID, c.question, c.answer, c.userID, b.userEmail\n"
@@ -43,6 +43,12 @@ namespace Project2.Controllers
             return View(mission);
         }
 
+        //[HttpPost]
+        [ValidateInput(false)]
+        public ActionResult PostAnswer(int missionQuestionID, int missionID, int userID, string question, string answer)
+        {
 
+            return View("Index");
+        }
     }
 }

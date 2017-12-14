@@ -42,8 +42,9 @@
             <p style="font-size:x-small">submitted by @item.userEmail</p>
             @using (Html.BeginForm("Index", "Home", FormMethod.Post))
             {
-                <input type="text" name="first" />
-                <input type="submit" value="Search" />
+                @Html.TextArea("inputMessage", null, new { @class = "form-control", @rows = "3", @placeholder = "Submit Answer" })
+                <br />
+                @Html.ActionLink("Submit Answer", "PostAnswer", "Home", new { missionQuestionID = item.missionQuestionID, missionID = item.missionID, userID = 1, question = item.question, answer = Html.TextArea("inputMessage") }, new { @class = "btn btn-info" });
             }
         </div>
     }
