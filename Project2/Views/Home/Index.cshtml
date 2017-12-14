@@ -2,30 +2,50 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<section class="call-to-action">
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <h1 id="cta-header">Ready to Change Your Life? &nbsp; @Html.ActionLink("Explore Missions", "Index", "Mission", null, new { @class = "btn btn-danger btn-lg" })</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="jumbotron main-header text-center">
+    <div class="main-header-content">
+        <h1>Called To Serve</h1>
+        <p class="lead"><em>"There are few times in your lives when you will enjoy the sweet spirit and satisfaction that come from giving full-time service together in the work of the Master."</em>  -<b>Thomas S. Monson</b></p>
+    </div>
 </div>
 
 <div class="row">
+    <div class="col-md-6">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mBsHAJ6U6Mw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-6">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vTzOWKYNkt8" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Missions</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            There are over 418 LDS church missions. Explore the missions and get answers to all of your questions.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Missions", "Index", "Missions", null, new { @class = "btn btn-primary btn-lg" })</p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>About</h2>
+        <p>
+            We are just a group of students who love the lord and his work. All we want is for you to feel the same.
+        </p>
+        <p>@Html.ActionLink("About Us", "About", "Home", null, new { @class = "btn btn-primary btn-lg" })</p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Contact</h2>
+        <p>
+            You can reach out to us with any questions or concerns. We are available 24/7 and would love to help you out.
+        </p>
+        <p>@Html.ActionLink("Contact Us", "Contact", "Home", null, new { @class = "btn btn-primary btn-lg" })</p>
     </div>
 </div>
