@@ -6,13 +6,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace New_Project_2.Models
+namespace Project2.Models
 {
     [Table("MissionQuestions")]
     public class MissionQuestions
     {
         [Key]
-        public int questionID { get; set; }
+        public int missionQuestionID { get; set; }
         public string question { get; set; }
         public string answer { get; set; }
 

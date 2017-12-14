@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using New_Project_2.Models;
+using Project2.Models;
 using Project2.DAL;
 
 namespace Project2.Controllers

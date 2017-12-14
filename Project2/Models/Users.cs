@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace New_Project_2.Models
+namespace Project2.Models
 {
     [Table("Users")]
     public class Users

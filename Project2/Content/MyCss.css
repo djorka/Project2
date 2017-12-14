@@ -1,0 +1,55 @@
+﻿body {
+}
+.team {
+    width: 250px;
+    height: 225px;
+}
+.container-center {
+    text-align: center;
+}
+ul.breadcrumb {
+    margin-bottom: 0px;
+}
+
+.jumbotron img {
+    height: 500px;
+    width: auto;
+}
+.main-header {
+    background: url('Images/worldMap.jpg') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    color: black;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.mission-header {
+    background: url('Images/preachGospel.jpg') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.call-to-action {
+    background: #0086d2;
+    padding: 40px 0;
+}
+#cta-header {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Arial;
+    font-size: 40px;
+}
+.input-group {
+    margin: 0px auto;
+}
+
+

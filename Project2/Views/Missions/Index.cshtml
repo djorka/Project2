@@ -5,7 +5,7 @@
 }
 
 <h2>Index</h2>
-
+<!--
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -67,8 +67,8 @@
 }
 
 </table>
-
-<div class="container text-center">
+-->
+<div class="jumbotron mission-header text-center">
     <div class="dropdown">
         <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
             Select a Mission
@@ -77,8 +77,16 @@
         <ul class="dropdown-menu">
             @foreach (var item in Model)
             {
-                <li>@Html.ActionLink(item.missionName, "MissionPage", "Mission", new { MisName = item.missionName }, new { @class = "btn" })</li>
+                <li>@Html.ActionLink(item.missionName, "FrequentQuestions", "Home", new { MisName = item.missionName }, new { @class = "btn" })</li>
             }
         </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/W0-0nniCz6k" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-6">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PpEhE_scrs4" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
