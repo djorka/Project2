@@ -67,3 +67,18 @@
 }
 
 </table>
+
+<div class="container text-center">
+    <div class="dropdown">
+        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+            Select a Mission
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            @foreach (var item in Model)
+            {
+                <li class="text-center">@Html.ActionLink(item.missionName, "MissionPage", "Mission", new { MisName = item.missionName }, new { @class = "btn" })</li>
+            }
+        </ul>
+    </div>
+</div>

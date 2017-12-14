@@ -1,17 +1,54 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Us";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="container">
+    <div class="container text-center">
+        <h2>@ViewBag.Title</h2>
+        <h3>Group 13</h3>
+        <h4>(810) 123-4567</h4>
+        <h4>hr@group13.com </h4>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @using (Html.BeginForm("Email_Form", "Home", FormMethod.Post))
+            {
+                <div class="input-group">
+                    <label for="inputName" class="input-group-addon">Name</label>
+                    @Html.TextBox("Name", null, new { @class = "form-control", @placeholder = "Full Name" })
+                </div>
+                <br />
+                <div class="input-group">
+                    <label for="inputEmail" class="input-group-addon">Email</label>
+                    @Html.TextBox("Email", null, new { @class = "form-control", @placeholder = "Email Address" })
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="sel1">Subject (select one):</label>
+                    <select class="form-control" id="sel1">
+                        <option>Select One</option>
+                        <option>Urgent Question</option>
+                        <option>Thanks!</option>
+                        <option>Mission-specific Question</option>
+                        <option>Comment</option>
+                    </select>
+                </div>
+                <br />
+                <div class="input-group">
+                    <label for="inputMessage" class="input-group-addon">Message</label>
+                    @Html.TextArea("inputMessage", null, new { @class = "form-control", @rows = "10", @placeholder = "Put your message here!" })
+                </div>
+                <br />
+                <p>
+                    <input type="reset" class="btn btn-info" value="Reset Button">
+                    &nbsp;
+                    <input type="reset" class="btn btn-info" value="Submit Button">
+                </p>
+            }
+        </div>
+        <div class="col-md-7 col-md-offset-1">
+            <img src="~/Content/Images/missionaries.png" />
+        </div>
+    </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</div>
