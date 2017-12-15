@@ -20,5 +20,6 @@ namespace Project2.Models
         public string answer { get; set; }
         public int userID { get; set; }
         public string userEmail { get; set; }
+        public string upadateAnswer { get; set; }
     }
 }

@@ -36,16 +36,38 @@
 <div class="container container-fluid">
     @foreach (var item in Model)
     {
-        <div class="col-md-6 ">
-            <h3 class="text-center"><b>Q: @item.question</b></h3>
+        <div class="col-md-6 text-center">
+            <h3><b>Q: @item.question</b></h3>
             <p class="lead">A: @item.answer</p>
             <p style="font-size:x-small">submitted by @item.userEmail</p>
-            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
             {
-                @Html.TextArea("inputMessage", null, new { @class = "form-control", @rows = "3", @placeholder = "Submit Answer" })
+                @Html.Hidden("missionQuestionID", item.missionQuestionID)
+                @Html.Hidden("missionID", item.missionID)
+                @Html.Hidden("userID", item.userID)
+                @Html.Hidden("question", item.question)
+                @Html.TextArea("answer")
+                @Html.Hidden("missionName", item.missionName)
                 <br />
-                @Html.ActionLink("Submit Answer", "PostAnswer", "Home", new { missionQuestionID = item.missionQuestionID, missionID = item.missionID, userID = 1, question = item.question, answer = Html.TextArea("inputMessage") }, new { @class = "btn btn-info" });
+                <input type="submit" class="btn btn-default" />
             }
         </div>
     }
+</div>
+<hr />
+<div class="container container-fluid">
+    <h1 class="text-center text-warning">Ask a Question</h1>
+    <div class="text-center">
+        @using (Html.BeginForm("AddQuestion", "Home", FormMethod.Post))
+        {
+            @Html.Hidden("missionQuestionID")
+            @Html.Hidden("missionID", Model.First().missionID)
+            @Html.Hidden("userID", Model.First().userID)
+            @Html.TextArea("question")
+            @Html.Hidden("answer")
+            @Html.Hidden("missionName", Model.First().missionName)
+            <br />
+            <input type="submit" class="btn btn-default" />
+        }
+    </div>
 </div>
