@@ -227,7 +227,7 @@
     <Content Include="Content\Images\oklahomaFlag.png" />
     <Content Include="Content\Images\preachGospel.jpg" />
     <Content Include="Content\Images\rem.png" />
-    <Content Include="Content\Images\worldMap.jpg" />
+    <Content Include="Content\Images\temple.png" />
     <Content Include="Content\Images\zach.png" />
     <Content Include="Content\MyCss.css" />
     <Content Include="favicon.ico" />
@@ -301,11 +301,6 @@
     <Content Include="Views\Missions\Details.cshtml" />
     <Content Include="Views\Missions\Edit.cshtml" />
     <Content Include="Views\Missions\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Home\FrequentQuestions.cshtml" />
     <Content Include="Views\MissionQuestions\Create.cshtml" />
     <Content Include="Views\MissionQuestions\Delete.cshtml" />

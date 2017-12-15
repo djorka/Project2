@@ -1,5 +1,13 @@
 ﻿@model IEnumerable<Project2.Models.FaqPage>
 
+<!--Breadcrumb to display where in url structure the user is at-->
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Select Mission", "Index", "Missions")</li>
+    <li>@Model.First().missionName</li>
+</ul>
+
+<!--Fill out page with mission info, uses Model.First() because data is passed to view as a query and contains mission info on each record and we do not want to loop those-->
 <div class="jumbotron text-center">
     <img src=@Href(Model.First().missionFlagURL) />
     <h1>@Model.First().missionName</h1>
@@ -33,6 +41,7 @@
     <h1 class="text-center text-warning">FAQ</h1>
 </div>
 
+<!--Loop through model and generate FAQ page-->
 <div class="container container-fluid">
     @foreach (var item in Model)
     {
@@ -40,6 +49,7 @@
             <h3><b>Q: @item.question</b></h3>
             <p class="lead">A: @item.answer</p>
             <p style="font-size:x-small">submitted by @item.userEmail</p>
+            <!--Form for answering a question, info is sent to post action to update "Edit" action in "Home" controller-->
             @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
             {
                 @Html.Hidden("missionQuestionID", item.missionQuestionID)
@@ -55,6 +65,7 @@
     }
 </div>
 <hr />
+<!--Create ask question form using Model.First() for data we want to pass from model back to controller action-->
 <div class="container container-fluid">
     <h1 class="text-center text-warning">Ask a Question</h1>
     <div class="text-center">

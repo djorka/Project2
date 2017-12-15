@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+//Model with a model approach for mission / user / questions
+//model used to store query results containing mission info so that mission info and all of its questions can be stored in one view
 namespace Project2.Models
 {
     public class FaqPage

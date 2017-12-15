@@ -2,6 +2,14 @@
 @{
     ViewBag.Title = "About";
 }
+
+<!--Breadcrumb to display where in url structure the user is at-->
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>About Us</li>
+</ul>
+
+<!--Group info and images using bootstrap classes-->
 <h1>@ViewBag.Title</h1>
 <p class="lead">
     Mission Site began as an initiative to connect return missionaries with propsective missionaries. Our vision is to enabled newly called missionaries to become more prepared to serve. This is accomplished through a platform whichs connects thousands of individuals with the answers they are looking for. We encourage the participation of all return missionaries in answering questions and offering advice to the Lord’s young full time servants. If you would like to know more please reach out through our contact page.

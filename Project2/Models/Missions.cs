@@ -5,6 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
+//Model representing missions database, ID is not an identity field
+//Will need to find max id + 1 and assign that to missionID if adding new missions
 namespace Project2.Models
 {
     [Table("Missions")]

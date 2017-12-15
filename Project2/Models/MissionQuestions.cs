@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
+//Model based on MissionQuestions Database
+//Has foreign keys pointing to the Missions and Users table
+//Used to update questions database and keep track of who asked it and for what mission
 namespace Project2.Models
 {
     [Table("MissionQuestions")]

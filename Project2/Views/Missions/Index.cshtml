@@ -4,70 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-<!--
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.missionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.missionPresidentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.missionAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.missionLanguage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.missionClimate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.missionDomReligion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.missionFlagURL)
-        </th>
-        <th></th>
-    </tr>
+<!--Breadcrumb to display where in url structure the user is at-->
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>Select Mission</li>
+</ul>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionPresidentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionLanguage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionClimate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionDomReligion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.missionFlagURL)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.missionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.missionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.missionID })
-        </td>
-    </tr>
-}
-
-</table>
--->
+<!--Create a drop down list with the the missions from the missions database-->
 <div class="jumbotron mission-header text-center">
     <div class="dropdown">
         <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
@@ -75,6 +18,7 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
+            <!--loop through each mission and add to dropdown list-->
             @foreach (var item in Model)
             {
                 <li>@Html.ActionLink(item.missionName, "FrequentQuestions", "Home", new { MisName = item.missionName }, new { @class = "btn" })</li>
