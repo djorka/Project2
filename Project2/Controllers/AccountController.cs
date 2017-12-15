@@ -335,6 +335,7 @@ namespace Project2.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    //extract user email, firstname, and last name from google api to add to users database
                     if (loginInfo.Login.LoginProvider == "Google")
                     {
                         var externalIdentity = AuthenticationManager.GetExternalIdentityAsync(DefaultAuthenticationTypes.ExternalCookie);
@@ -357,7 +358,11 @@ namespace Project2.Controllers
 
                         if (currentUser.Count() > 0)
                         {
-
+                            //Add current user to users database
+                            /*db.Database.ExecuteSqlCommand(
+                            "UPDATE * " +
+                            "FROM Users " +
+                            "WHERE userEmail = '" + email + "'");*/
                         }
                     }
                     return RedirectToLocal(returnUrl);

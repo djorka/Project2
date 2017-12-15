@@ -37,6 +37,7 @@ ul.breadcrumb {
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 .call-to-action {
     background: #0086d2;
